@@ -17,7 +17,10 @@
             </div>
             <div class="tool-panel add-animation">
                 <div class="tool active">
-                    <img src="Icons/Black_Pencil.svg" class="tool-img" id="pencil-img" alt="" onclick="handleLocaltoolChange('pencil')">
+                    <figure style="text-align: center;">
+                        <img src="Icons/Black_Pencil.svg" class="tool-img" id="pencil-img" alt="" onclick="handleLocaltoolChange('pencil')">
+                        <figcaption>Pencil</figcaption>
+                    </figure>
                     <div class="tool-options pencil">
                         <div class="pencil-size">
                             <input type="range" id="pen-size" min="5" max="30" value="5" onchange="sizeChange(this.value)">
@@ -30,7 +33,7 @@
                     </div>
                 </div>
                 <div class="tool eraser">
-                    <figure>
+                    <figure style="text-align: center;">
                         <img src="Icons/Eraser.svg" alt="" class="tool-img" id="eraser-img" onclick="handleLocaltoolChange('eraser')">
                         <figcaption>Eraser</figcaption>
                     </figure>
@@ -41,20 +44,35 @@
                     </div>
                 </div>
                 <div class="tool">
-                    <img src="Icons/StickyNote.svg" alt="" onclick="handleLocaltoolChange('sticky')" class="tool-img">
+                    <figure style="text-align: center;">
+                        <img src="Icons/StickyNote.svg" alt="" onclick="handleLocaltoolChange('sticky')" class="tool-img">
+                        <figcaption>Sticky Note</figcaption>
+                    </figure>
                 </div>
                 <div class="tool">
                     <input type="file" name="" id="" class="input-img" accept="image/*">
-                    <img src="Icons/Photo.svg" alt="" class="upload-img tool-img" onclick="handleLocaltoolChange('upload')"> 
+                    <figure style="text-align: center;">
+                        <img src="Icons/Photo.svg" alt="" class="upload-img tool-img" onclick="handleLocaltoolChange('upload')">
+                        <figcaption>Upload Image</figcaption>
+                    </figure> 
                 </div>
                 <div class="tool">
-                    <img src="Icons/Download.svg" alt="" class="tool-img download-tool">
+                    <figure style="text-align: center;">
+                        <img src="Icons/Download.svg" alt="" class="tool-img download-tool">
+                        <figcaption>Download Board</figcaption>
+                    </figure>  
                 </div>
                 <div class="tool">
-                    <img src="Icons/Undo.svg" alt="" class="tool-img undo">
+                    <figure style="text-align: center;">
+                        <img src="Icons/Undo.svg" alt="" class="tool-img undo">
+                        <figcaption>Undo</figcaption>
+                    </figure>
                 </div>
                 <div class="tool">
-                    <img src="Icons/Redo.svg" alt="" class="tool-img redo">
+                    <figure style="text-align: center;">
+                        <img src="Icons/Redo.svg" alt="" class="tool-img redo">
+                        <figcaption>Redo</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
