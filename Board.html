@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Board</title>
+    <link rel="icon" href="Favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="combined">
+        <div class="toolBar">
+            <div class="hamburger is-active" id="hamburger-1">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div class="tool-panel add-animation">
+                <div class="tool active">
+                    <img src="Icons/Black_Pencil.svg" class="tool-img" id="pencil-img" alt="" onclick="handleLocaltoolChange('pencil')">
+                    <div class="tool-options pencil">
+                        <div class="pencil-size">
+                            <input type="range" id="pen-size" min="5" max="30" value="5" onchange="sizeChange(this.value)">
+                        </div>
+                        <div class="pencil-color">
+                            <div class="colors red" onclick="handleColorChange('red')"></div>
+                            <div class="colors green" onclick="handleColorChange('#55efc4')"></div>
+                            <div class="colors blue" onclick="handleColorChange('blue')"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tool eraser">
+                    <figure>
+                        <img src="Icons/Eraser.svg" alt="" class="tool-img" id="eraser-img" onclick="handleLocaltoolChange('eraser')">
+                        <figcaption>Eraser</figcaption>
+                    </figure>
+                    <div class="tool-options eraser">
+                        <div class="eraser-size">
+                            <input type="range" id="eraser-size" min="5" max="30" onclick="sizeChange(this.value)">
+                        </div>
+                    </div>
+                </div>
+                <div class="tool">
+                    <img src="Icons/StickyNote.svg" alt="" onclick="handleLocaltoolChange('sticky')" class="tool-img">
+                </div>
+                <div class="tool">
+                    <input type="file" name="" id="" class="input-img" accept="image/*">
+                    <img src="Icons/Photo.svg" alt="" class="upload-img tool-img" onclick="handleLocaltoolChange('upload')"> 
+                </div>
+                <div class="tool">
+                    <img src="Icons/Download.svg" alt="" class="tool-img download-tool">
+                </div>
+                <div class="tool">
+                    <img src="Icons/Undo.svg" alt="" class="tool-img undo">
+                </div>
+                <div class="tool">
+                    <img src="Icons/Redo.svg" alt="" class="tool-img redo">
+                </div>
+            </div>
+        </div>
+        <canvas class="board">
+        </canvas>
+    </div>
+    <script src="functionality.js"></script>
+</body>
+</html>
