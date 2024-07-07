@@ -101,6 +101,7 @@ board.addEventListener("mousedown" , function (e) {
         identifier: "mousedown",
         color: ctx.strokeStyle,
         width: ctx.lineWidth,
+        operation: ctx.globalCompositeOperation,
     };
 
     undoStack.push(point);
@@ -118,6 +119,7 @@ board.addEventListener("mousemove" , function (e) {
             identifier: "mousemove",
             color: ctx.strokeStyle,
             width: ctx.lineWidth,
+            operation: ctx.globalCompositeOperation,
         };
 
         undoStack.push(point);
@@ -304,9 +306,10 @@ function redoMaker(){
 function redraw() {
     ctx.clearRect(0 , 0 , board.width , board.height);
     for(let i = 0 ; i < undoStack.length ; i++){
-        let {x , y , identifier , color , width } = undoStack[i];
+        let {x , y , identifier , color , width , operation} = undoStack[i];
         ctx.strokeStyle = color;
         ctx.lineWidth = width;
+        ctx.globalCompositeOperation = operation
         if(identifier == "mousedown"){
             ctx.beginPath();
             ctx.moveTo(x , y);
